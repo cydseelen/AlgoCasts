@@ -6,10 +6,22 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+function reverse(str) {
+  let reversed = '';
+
+  for (let character of str) {
+    // ^ FOR Variable declaration (let) OF Iterable Object that we want to iterate through (str)
+    reversed = character + reversed;
+    // ^Adds each character to the reversed string
+  }
+  return reversed;
+  }
 // function reverse(str) {
-//   return str.split('').reduce((reversed, character) =>
-//     character + reversed, '');
+//   return str.split('').reduce((rev, char) =>
+//     char + rev, '');
 // }
+
+// reverse('cydnie');
 
 // function reverse(str) {
 //   if (str === "")
@@ -47,17 +59,17 @@
 
 // console.log(reverse("cydnie"));
 
-function reverse(str) {
-  var splitString = str.split("");
-  // ^Split the argument string into an array of strings where each letter is a string
-  var reverseArray = splitString.reverse();
-  // ^This reverses the order of the array with the last letter at the beginning
-  var joinArray = splitString.join("");
-  // ^this joins the letter strings into 1 string with all the letters in the desired reverse order
-  return joinArray;
-  // ^Returns the reversed string
-}
+// function reverse(str) {
+//   var splitString = str.split("");
+//   // ^Split the argument string into an array of strings where each letter is a string
+//   var reverseArray = splitString.reverse();
+//   // ^This reverses the order of the array with the last letter at the beginning
+//   var joinArray = splitString.join("");
+//   // ^this joins the letter strings into 1 string with all the letters in the desired reverse order
+//   return joinArray;
+//   // ^Returns the reversed string
+// }
 
-console.log(reverse("excellent"));
+// reverse("excellent");
 // ^Prints the reversed string
 module.exports = reverse;
