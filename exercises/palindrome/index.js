@@ -7,6 +7,29 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+// Pseudo code
+// 1. if else statement
+//  if str === reverse function
+// return true
+// else return
+
+function palindrome(str) {
+  const reversed = str.split('').reverse().join('');
+
+  return str === reversed;
+  // Boolean statement will return true or false
+}
+
+//Walk through
+//Need to turn str into an array w/ split so we can use the every method
+// every is an advanced array helper
+//pass every the character & the index of the character
+//compare the character to the character at the opposite end of the array
+
+// function palindrome(str) {
+//   return str.split('').every((char, i) => {
+//     return char === str[str.length - i - 1];
+//   });
+// }
 
 module.exports = palindrome;
